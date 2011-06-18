@@ -43,7 +43,8 @@ PRODUCT_PACKAGES += \
 
 # Extra tools in CyanogenMod
 PRODUCT_PACKAGES += \
-    openvpn
+    openvpn \
+    su
 
 # Copy over the changelog to the device
 PRODUCT_COPY_FILES += \
