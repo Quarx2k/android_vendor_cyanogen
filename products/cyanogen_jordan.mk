@@ -12,6 +12,8 @@ PRODUCT_BRAND := MOTO
 PRODUCT_DEVICE := jordan
 PRODUCT_MODEL := MB525
 PRODUCT_MANUFACTURER := motorola
+PRODUCT_SBF := 3.4.2-179
+PRODUCT_SFX := RTGB
 
 #
 # Set ro.modversion
@@ -35,11 +37,11 @@ DATE     := $(shell date +%Y%m%d)
 PRODUCT_BUILD_PROP_OVERRIDES := \
 BUILD_ID=GRJ22 \
 BUILD_DISPLAY_ID="Gingerbread GRJ22" \
-PRODUCT_NAME=MB525_RTNORD \
+PRODUCT_NAME=MB525_${PRODUCT_SFX} \
 TARGET_DEVICE=umts_jordan \
-BUILD_FINGERPRINT=MOTO/MB525_RTNORD/umts_jordan/jordan:2.3.4/3.4.2-177/${UTC_DATE}:user/release-keys \
+BUILD_FINGERPRINT=MOTO/MB525_${PRODUCT_SFX}/umts_jordan/jordan:2.3.4/${PRODUCT_SBF}/${UTC_DATE}:user/release-keys \
 PRODUCT_BRAND=MOTO \
-PRIVATE_BUILD_DESC="umts_jordan-user 2.3.4 3.4.2-177 ${UTC_DATE} release-keys" \
+PRIVATE_BUILD_DESC="umts_jordan-user 2.3.4 ${PRODUCT_SBF} ${UTC_DATE} release-keys" \
 BUILD_NUMBER=${DATE} \
 BUILD_VERSION_TAGS=release-keys \
 TARGET_BUILD_TYPE=user \
@@ -54,3 +56,7 @@ PRODUCT_PACKAGE_OVERLAYS += \
 # Add the Torch app
 PRODUCT_PACKAGES += \
     Torch
+
+# TI FM radio
+$(call inherit-product, vendor/cyanogen/products/ti_fm_radio.mk)
+
