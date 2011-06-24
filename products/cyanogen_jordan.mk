@@ -12,7 +12,7 @@ PRODUCT_BRAND := MOTO
 PRODUCT_DEVICE := jordan
 PRODUCT_MODEL := MB525
 PRODUCT_MANUFACTURER := motorola
-PRODUCT_SBF := 3.4.2-177
+PRODUCT_SBF := 3.4.2-179
 PRODUCT_SFX := RTGB
 
 #
@@ -24,7 +24,7 @@ ifdef CYANOGEN_NIGHTLY
 else
     ifdef CYANOGEN_RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-RC1-jordan
+            ro.modversion=CyanogenMod-7.1.0-RC2-jordan
     else
         PRODUCT_PROPERTY_OVERRIDES += \
             ro.modversion=CyanogenMod-7.1.0-RC1-jordan
