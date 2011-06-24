@@ -27,7 +27,7 @@ else
             ro.modversion=CyanogenMod-7.1.0-RC1-jordan
     else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-RC0-jordan
+            ro.modversion=CyanogenMod-7.1.0-RC1-jordan
     endif
 endif
 
@@ -58,5 +58,5 @@ PRODUCT_PACKAGES += \
     Torch
 
 # TI FM radio
-$(call inherit-product, vendor/cyanogen/products/ti_fm_radio.mk)
+# $(call inherit-product, vendor/cyanogen/products/ti_fm_radio.mk)
 
