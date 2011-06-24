@@ -164,8 +164,9 @@ rm -rf $SMALID
 )
 echo
 
-# prebuilt boot.img & updater-script
-cp $ANDROID_BUILD_TOP/device/motorola/jordan/boot.img $REPACK/ota/
+# prebuilt boot.img, devtree.img & updater-script
+cp -f $ANDROID_BUILD_TOP/vendor/motorola/jordan/boot-222-179-2.smg $REPACK/ota/boot.img
+cp -f $ANDROID_BUILD_TOP/vendor/motorola/jordan/devtree-222-179-2.smg $REPACK/ota/devtree.img
 cp -fr $ANDROID_BUILD_TOP/device/motorola/jordan/updater-script $REPACK/ota/META-INF/com/google/android/
 
 # Delete unnecessary binaries
@@ -179,9 +180,6 @@ rm -rf $REPACK/ota/recovery
 
 # Strip modules
 find $REPACK/ota/system/lib/modules -name "*.ko" -print0 | xargs -0 arm-eabi-strip --strip-unneeded
-
-# Add devtree
-cp -f $ANDROID_BUILD_TOP/vendor/motorola/jordan/devtree-222-179-2.smg $REPACK/ota/devtree.smg
 
 # Determine what to name the new signed package
 if [ -z "$CYANOGEN_NIGHTLY" ]; then
