@@ -167,7 +167,10 @@ echo
 # prebuilt boot.img, devtree.img & updater-script
 cp -f $ANDROID_BUILD_TOP/vendor/motorola/jordan/boot-222-179-2.smg $REPACK/ota/boot.img
 cp -f $ANDROID_BUILD_TOP/vendor/motorola/jordan/devtree-222-179-2.smg $REPACK/ota/devtree.img
-cp -fr $ANDROID_BUILD_TOP/device/motorola/jordan/updater-script $REPACK/ota/META-INF/com/google/android/
+cp -f $ANDROID_BUILD_TOP/device/motorola/jordan/updater-script $REPACK/ota/META-INF/com/google/android/updater-script
+if [ -z "$CYANOGEN_NIGHTLY" ]; then
+  cat $ANDROID_BUILD_TOP/device/motorola/jordan/updater-script-rel >> $REPACK/ota/META-INF/com/google/android/updater-script
+fi
 
 # Delete unnecessary binaries
 ( cd $REPACK/ota/system/bin; echo $DELETE_BINS | xargs rm -f; )
