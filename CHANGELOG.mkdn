@@ -101,8 +101,6 @@ CHANGELOG
 
 ### 7.0.3
 * Common: Don't allow packages with platform keys on user-controlled storage
-* Common: Security Fix
-* Common: Update Script Fix
 
 ### 7.0.2
 * Common: Fix issue with missing built-in themes
