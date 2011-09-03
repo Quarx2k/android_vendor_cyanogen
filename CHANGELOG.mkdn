@@ -75,7 +75,27 @@ Translators:
 CHANGELOG
 ---------
 
-### 7.1.0-pre
+### 7.1.0-RC1.5 Jordan (3 Sep 2011)
+
+Note: Official jordan cyanogen builds are now booting
+      but some work is required on video codecs
+
+* USB/Wifi/Bluetooth Tethering.
+* New set of kernel modules built from sources: overclocking, MMC-fix, multitouch
+* Camera: Touch to focus
+* Fixed video flashlight for red camera
+* N-point MultiTouch (persist.sys.multitouch)
+* Fixed geotags in the photos
+* Fixed dual SIM adapters which use Stk not working
+* Increase boot speed. (merged in CM7)
+* Bionic libc optimization (merged in CM7)
+* CrystalTalk (Voice filter)
+* Bootmenu 1.0.4 with adb modes and new Mass storage modes
+* Overscroll custom color (not only set by themes)
+* Adb over Network with warning
+* Camera shutter mute setting (persist.sys.camera-mute)
+
+### Official Cyanogen :
 * Common: Android 2.3.5 (Google)
 * Common: Bluetooth mouse support - Scott Brady
 * Common: Improve notification swipe-to-clear - Evan Charlton
