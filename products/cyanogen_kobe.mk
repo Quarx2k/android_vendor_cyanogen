@@ -7,9 +7,6 @@ $(call inherit-product, vendor/cyanogen/products/gsm.mk)
 # Inherit some common cyanogenmod stuff.
 $(call inherit-product, vendor/cyanogen/products/common_full.mk)
 
-# Extra jordan overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/kobe
-
 #
 # Setup device specific product configuration.
 #
@@ -33,7 +30,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=${PRODUCT_MODEL}_${PRODUCT_SFX} \
     TARGET_DEVICE=umts_kobe \
     BUILD_FINGERPRINT=MOTO/MB520_RTDACH/umts_kobe:2.3.4/4.5.1-134_DFP-74/1313117579:user/release-keys \
-    PRIVATE_BUILD_DESC="umts_jordan_emara-user 2.3.4 4.5.1-134_DFP-74 1313117579 release-keys" \
+    PRIVATE_BUILD_DESC="umts_kobe_emara-user 2.3.4 4.5.1-134_DFP-74 1313117579 release-keys" \
     BUILD_NUMBER=${DATE} \
     BUILD_VERSION_TAGS=release-keys \
     TARGET_BUILD_TYPE=user
